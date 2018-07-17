@@ -36,8 +36,9 @@ public class SpringSessionController {
 		return "redirect:/";
 	}
 
+	@SuppressWarnings("unchecked")
 	private List<String> getFavColors(HttpSession session) {
-		List<String> favoriteColors = (List<String>) session.getAttribute("favoriteColors");
+		List<String> favoriteColors =  (List<String>) session.getAttribute("favoriteColors");
 			if(favoriteColors==null) {
 				favoriteColors = new ArrayList<>();
 			}
